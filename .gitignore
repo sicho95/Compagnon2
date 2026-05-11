@@ -1,0 +1,19 @@
+# Secrets
+src/config/secrets.h
+
+# Arduino build artifacts
+build/
+.pio/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Generated
+*.bin
+*.elf
+*.map
