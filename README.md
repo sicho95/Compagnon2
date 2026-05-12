@@ -1,6 +1,5 @@
 # Compagnon2 — Firmware ESP32-S3 Waveshare AMOLED 2.16
 
-> Fork de [xiaoclaw](https://github.com/beancookie/xiaoclaw) adapté pour :
 > - **Hardware** : Waveshare ESP32-S3-Touch-AMOLED-2.16 (16MB Flash, 8MB PSRAM)
 > - **Display** : CO5300 AMOLED 466×466, tactile CST92xx, Arduino GFX / LVGL 8.x
 > - **LLM** : Groq API (clé gratuite, ultra-rapide, 0€/mois)
@@ -32,26 +31,25 @@
 │              COMPAGNON2 FIRMWARE                │
 ├──────────────────┬──────────────────────────────┤
 │  Voice I/O Layer │  LVGL UI Layer               │
-│  (xiaozhi)       │  (waveshare display)         │
 │  - Wake word     │  - Home screen               │
 │  - ASR streaming │  - Agent list & switch       │
 │  - TTS playback  │  - Chat history              │
 │  - ES7210 mic    │  - Config / WiFi / API key   │
 │  - ES8311 spk    │  - Skills browser            │
 ├──────────────────┴──────────────────────────────┤
-│              Bridge Layer                        │
+│              Bridge Layer                       │
 │  (voice text ↔ agent commands)                  │
 ├─────────────────────────────────────────────────┤
-│              Agent Brain (mimiclaw)              │
+│             Agent Brain (mimiclaw)              │
 │  - Groq LLM API (llama3-8b-8192)                │
 │  - ReAct loop + tool calling                    │
-│  - Multi-agent profiles (Jardinier, Travail…)   │
+│  - Multi-agent profiles (Bourse, Travail…)      │
 │  - Memory L0-L4 sur LittleFS                    │
 │  - Auto-cristallisation de skills               │
 │  - Cron scheduler                               │
 │  - Lua scripting                                │
 ├─────────────────────────────────────────────────┤
-│              PWA Config App                      │
+│              PWA Config App                     │
 │  (serveur HTTP embarqué sur ESP32)              │
 │  - WiFi setup, Groq API key                     │
 │  - Agent profiles editor                        │
@@ -173,9 +171,3 @@ Compagnon2/
 - [ ] BLE fallback relay (v1)
 - [ ] Cron scheduler (v1)
 - [ ] Lua scripting (v1)
-
----
-
-## Licence
-
-MIT — Basé sur [xiaoclaw](https://github.com/beancookie/xiaoclaw) (MIT) et [xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) (MIT).
